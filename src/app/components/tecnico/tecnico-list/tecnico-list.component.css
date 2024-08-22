@@ -1,0 +1,10 @@
+.container{
+    width: 90%;
+    margin: auto;
+    border-radius: 2rem;
+    top:-2px;box-shadow:2 2px 2px #666;
+}
+
+table {
+    width: 100%;
+}
