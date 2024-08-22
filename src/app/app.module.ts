@@ -30,7 +30,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-
+import { ToastrModule } from 'ngx-toastr';
 //Componentes de projeto
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
@@ -72,6 +72,11 @@ import { LoginComponent } from './components/login/login.component';
      MatIconModule,
      MatListModule,
      MatCardModule,
+     ToastrModule.forRoot({
+      timeOut:500,
+      closeButton:true,
+      progressBar:true
+     })
   ],
   providers: [
     provideClientHydration(),
