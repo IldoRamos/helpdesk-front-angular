@@ -31,11 +31,11 @@ export class LoginComponent implements OnInit {
 
   logar(){
     this.service.authenticate(this.creds).subscribe(response=>{
-      this.toast.info(response.headers.get('Authorization'));
+      //this.toast.info(response.headers.get('Authorization'));
       this.service.successfullLogin(response.headers.get('Authorization').substring(7));
       this.router.navigate(['']);
     },()=>{
-      this.toast.error('Usuario e/ou senha invaldos!');
+      this.toast.error('Usuario e/ou senha invaldos!' ,'Login', {timeOut: 7000});
    })
   }
 
