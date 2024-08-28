@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 // Para trabalhar com formulários no Angular 12
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -73,14 +73,15 @@ import { LoginComponent } from './components/login/login.component';
      MatListModule,
      MatCardModule,
      ToastrModule.forRoot({
-      timeOut:500,
+      timeOut:800,
       closeButton:true,
       progressBar:true
      })
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
