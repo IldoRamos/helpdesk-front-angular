@@ -1,4 +1,4 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component ,OnInit, signal} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
@@ -16,7 +16,7 @@ export class NavComponent implements OnInit{
   ){}
 
   ngOnInit():  void{
-    this.router.navigate(['tecnico'])
+    this.router.navigate(['tecnico/create'])
   }
 
   logout(){
